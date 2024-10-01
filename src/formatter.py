@@ -51,8 +51,11 @@ def formatResult(website, titles, prices, links, ratings, ratingsCount):
         if prices:
             price = prices[0].get_text().strip()
             price = re.search(r"\S+\d[\d,\.]*?\b", price)
-            price = price.group()
-
+            if price: 
+                price=price.group()
+            else: price='N/A'
+            
+            
     if website == "target":
         link = links
     elif website == "walmart":
