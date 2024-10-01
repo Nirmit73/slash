@@ -202,7 +202,7 @@ def searchCostCo(query, linkFlag):
     URL = f'https://www.costco.com/CatalogSearch?dept=All&keyword={query}'
     options = webdriver.ChromeOptions()
     # options.add_argument('-headless')
-    driver = webdriver.Chrome(chrome_options=options)
+    driver = webdriver.Chrome(options=options)
     driver.get(URL)
     soup = BeautifulSoup(driver.page_source, "html.parser")
     results = soup.findAll("div", {"class": "product"})
@@ -235,7 +235,7 @@ def searcheBay(query, linkFlag):
     URL = f'https://www.ebay.com/sch/i.html?_nkw={query}'
     options = webdriver.ChromeOptions()
     options.add_argument('-headless')
-    driver = webdriver.Chrome(chrome_options=options)
+    driver = webdriver.Chrome(options=options)
     driver.get(URL)
     soup = BeautifulSoup(driver.page_source, "html.parser")
     results = soup.findAll("div", {"class": "s-item__info"})
