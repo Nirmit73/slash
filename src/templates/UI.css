@@ -1,0 +1,9 @@
+.center {
+    margin: auto;
+    text-align: center;
+    width: 90%;
+  }
+
+  input[type='number']{
+    width: 40px;
+} 
